@@ -15,13 +15,20 @@
         android:theme="@style/Theme.ShopProducts"
         tools:targetApi="31">
         <activity
-            android:name=".ui.view.MainActivity"
-            android:exported="true">
+            android:name=".ui.view.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/splash_background"/>
+        </activity>
+        <activity
+            android:name=".ui.view.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

@@ -67,6 +67,9 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
 
+    //splash screen
+    implementation (libs.androidx.core.splashscreen)
+
     // Skip this if you don't want to use integration libraries or configure Glide.
     annotationProcessor (libs.compiler)
     testImplementation(libs.junit)

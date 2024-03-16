@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ShopProducts</string>
+    <string name="product_name">Product name</string>
+    <string name="product_price">Precio</string>
 </resources>
