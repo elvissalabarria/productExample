@@ -19,7 +19,7 @@ class ProductViewHolder(view: View) : ViewHolder(view) {
             .load(productModel.image)
             .into(binding.imgProduct)
 
-
+        binding.tvRating.text = productModel.rating.rate.toString()
         itemView.setOnClickListener {
             onClickListener(productModel)
         }

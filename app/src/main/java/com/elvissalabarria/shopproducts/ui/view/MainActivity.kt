@@ -1,18 +1,14 @@
 package com.elvissalabarria.shopproducts.ui.view
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.elvissalabarria.shopproducts.Product
-import com.elvissalabarria.shopproducts.ProductProvider
-import com.elvissalabarria.shopproducts.ui.view.adapter.ProductAdapter
 import com.elvissalabarria.shopproducts.data.model.ProductModelItem
 import com.elvissalabarria.shopproducts.databinding.ActivityMainBinding
+import com.elvissalabarria.shopproducts.ui.view.adapter.ProductAdapter
 import com.elvissalabarria.shopproducts.ui.viewmodel.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,7 +23,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         productViewModel.onCreate()
+        initAppBar()
         initRecyclerView(productViewModel)
+    }
+
+    private fun initAppBar() {
+        setSupportActionBar(binding.toolBar)
+        title = "Shop Products"
     }
 
     private fun initRecyclerView(productViewModel: ProductViewModel) {
@@ -42,9 +44,14 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        productViewModel.isLoading.observe(this) {
+            binding.progress.isVisible = it
+        }
+
     }
 
     private fun onItemSelected(product: ProductModelItem) {
-        Toast.makeText(this, product.title, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DetailProduct::class.java)
+        startActivity(intent)
     }
 }
