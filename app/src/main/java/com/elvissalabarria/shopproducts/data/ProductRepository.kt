@@ -8,7 +8,10 @@ class ProductRepository @Inject constructor(
     private val clientService: ClientService
 ) {
     suspend fun getAllProducts(): List<ProductModelItem> {
-        val response: List<ProductModelItem> = clientService.getAllProducts()
-        return response
+        return clientService.getAllProducts()
+    }
+
+    suspend fun getAllCategories(): List<String> {
+        return clientService.getAllCategories()
     }
 }

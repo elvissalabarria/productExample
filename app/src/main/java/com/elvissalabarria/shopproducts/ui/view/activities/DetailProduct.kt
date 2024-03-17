@@ -1,4 +1,4 @@
-package com.elvissalabarria.shopproducts.ui.view
+package com.elvissalabarria.shopproducts.ui.view.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

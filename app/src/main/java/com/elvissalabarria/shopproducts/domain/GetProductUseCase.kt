@@ -10,4 +10,5 @@ class GetProductUseCase @Inject constructor(
     suspend operator fun invoke(): List<ProductModelItem> {
         return repository.getAllProducts()
     }
+
 }

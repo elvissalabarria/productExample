@@ -1,4 +1,4 @@
-package com.elvissalabarria.shopproducts.ui.viewmodel
+package com.elvissalabarria.shopproducts.ui.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

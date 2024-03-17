@@ -1,9 +1,8 @@
-package com.elvissalabarria.shopproducts.ui.view.adapter
+package com.elvissalabarria.shopproducts.ui.view.adapters.products
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.elvissalabarria.shopproducts.Product
 import com.elvissalabarria.shopproducts.R
 import com.elvissalabarria.shopproducts.data.model.ProductModelItem
 

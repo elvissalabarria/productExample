@@ -1,11 +1,8 @@
-package com.elvissalabarria.shopproducts.ui.view.adapter
+package com.elvissalabarria.shopproducts.ui.view.adapters.products
 
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.elvissalabarria.shopproducts.Product
-import com.elvissalabarria.shopproducts.data.model.ProductModel
 import com.elvissalabarria.shopproducts.data.model.ProductModelItem
 import com.elvissalabarria.shopproducts.databinding.ItemProductBinding
 
