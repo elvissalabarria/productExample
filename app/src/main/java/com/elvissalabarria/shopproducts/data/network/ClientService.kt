@@ -14,6 +14,7 @@ class ClientService @Inject constructor(
             response.body() ?: emptyList()
         }
     }
+
     suspend fun getAllCategories(): List<String> {
         return withContext(Dispatchers.IO) {
             val response = apiClient.getAllCategories()

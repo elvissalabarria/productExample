@@ -3,6 +3,7 @@ package com.elvissalabarria.shopproducts.ui.view.adapters.products
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.elvissalabarria.shopproducts.R
 import com.elvissalabarria.shopproducts.data.model.ProductModelItem
 import com.elvissalabarria.shopproducts.databinding.ItemProductBinding
 
@@ -14,6 +15,7 @@ class ProductViewHolder(view: View) : ViewHolder(view) {
         binding.tvProductPrice.text = "$${productModel.price}"
         Glide.with(binding.imgProduct.context)
             .load(productModel.image)
+            .placeholder(R.drawable.logo_splash)
             .into(binding.imgProduct)
 
         binding.tvRating.text = productModel.rating.rate.toString()

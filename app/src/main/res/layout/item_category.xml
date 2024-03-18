@@ -8,6 +8,7 @@
     android:layout_marginVertical="4dp"
     android:padding="@dimen/_5dp"
     app:cardCornerRadius="10dp"
+    android:id="@+id/cvCategory"
     app:cardElevation="4dp">
 
 

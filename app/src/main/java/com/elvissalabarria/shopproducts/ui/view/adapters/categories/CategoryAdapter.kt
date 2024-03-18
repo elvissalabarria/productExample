@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.elvissalabarria.shopproducts.R
+import com.elvissalabarria.shopproducts.data.model.CategoryModelItem
 
 class CategoryAdapter (
-    private val categoryList : List<String>,
-    private val onClickListener: (String) -> Unit
+    private val categoryList: List<CategoryModelItem>,
+    private val onClickListener: (CategoryModelItem) -> Unit
 ):RecyclerView.Adapter<CategoryViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
@@ -19,6 +20,6 @@ class CategoryAdapter (
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val item = categoryList[position]
-        holder.render(item, onClickListener)
+        holder.render(item, onClickListener, categoryList)
     }
 }
