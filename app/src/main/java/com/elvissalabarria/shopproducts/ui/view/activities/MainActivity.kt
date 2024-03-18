@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onItemSelected(product: ProductModelItem) {
         val intent = Intent(this, DetailProduct::class.java)
+        intent.putExtra("product_id", product.id)
         startActivity(intent)
     }
 }

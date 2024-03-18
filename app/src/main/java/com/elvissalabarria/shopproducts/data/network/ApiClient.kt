@@ -11,4 +11,7 @@ interface ApiClient {
 
     @GET("/products/categories")
     suspend fun getAllCategories(): Response<List<String>>
+
+    @GET("/products/{id}")
+    suspend fun getProductById(id: Int): Response<ProductModelItem>
 }

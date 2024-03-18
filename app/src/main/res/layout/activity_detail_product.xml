@@ -16,10 +16,24 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appBarDetailProduct"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -14,4 +14,8 @@ class ProductRepository @Inject constructor(
     suspend fun getAllCategories(): List<String> {
         return clientService.getAllCategories()
     }
+
+    suspend fun getProductById(id: Int): ProductModelItem {
+        return clientService.getProductById(id)
+    }
 }
